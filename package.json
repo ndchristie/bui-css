@@ -1,6 +1,6 @@
 {
   "name": "bui-css",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A contemporary, approachable css library for prototyping and beyond",
   "main": "index.js",
   "scripts": {
