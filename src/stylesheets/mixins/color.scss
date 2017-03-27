@@ -20,7 +20,7 @@
 
 @mixin bg-primary {
   background-color: $theme-primary;
-  color: $theme-lighter;
+  color: $theme-darkest;
 }
 
 @mixin bg-primary-light {
@@ -35,7 +35,7 @@
 
 @mixin bg-go {
   background-color: $theme-go;
-  color: $theme-lighter;
+  color: $theme-darkest;
 }
 
 @mixin bg-go-light {
@@ -50,7 +50,7 @@
 
 @mixin bg-yo {
   background-color: $theme-yo;
-  color: $theme-lighter;
+  color: $theme-darkest;
 }
 
 @mixin bg-yo-light {
@@ -65,7 +65,7 @@
 
 @mixin bg-no {
   background-color: $theme-no;
-  color: $theme-lighter;
+  color: $theme-darkest;
 }
 
 @mixin bg-no-light {
