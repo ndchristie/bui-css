@@ -1,0 +1,18 @@
+@import '../vars/color';
+@import '../vars/metrics';
+
+.bui {
+  &-body {
+    background: $theme-ground;
+    margin: 0;
+  }
+
+  &-container {
+    margin: 0 $gutter-width;
+
+    @media (min-width: $bp-lg + $gutter-width * 2) {
+      margin: 0 auto;
+      max-width: $bp-lg;
+    }
+  }
+}

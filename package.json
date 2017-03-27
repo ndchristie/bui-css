@@ -1,0 +1,49 @@
+{
+  "name": "bui-css",
+  "version": "0.0.0",
+  "description": "A contemporary, approachable css library for prototyping and beyond",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test",
+    "build": "gulp css && gulp css:min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndchristie/bui.git"
+  },
+  "keywords": [
+    "lightweight",
+    "contemporary",
+    "ui",
+    "library",
+    "css",
+    "scss",
+    "sass",
+    "theme"
+  ],
+  "author": "N.D.Christie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndchristie/bui/issues"
+  },
+  "homepage": "https://github.com/ndchristie/bui#readme",
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "postcss-cssnext": "^2.10.0",
+    "sass-module-importer": "^1.4.0",
+    "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "dependencies": {
+    "normalize.css": "^6.0.0"
+  },
+  "files": [
+    "lib/"
+  ]
+}

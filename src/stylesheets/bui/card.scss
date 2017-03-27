@@ -1,0 +1,74 @@
+@import '../vars/metrics';
+@import '../mixins/color';
+
+.bui {
+  &-card {
+    @include bg-lightest;
+
+    box-shadow: 0 8px 0 -4px transparentize($theme-darkest, 0.95);
+    border-radius: 2px;
+    list-style: none;
+    margin: $gutter-width 0;
+    overflow: auto;
+
+    &__body {
+      @include bg-lighter;
+    }
+
+    &__body,
+    &__heading {
+      margin: 0;
+      padding: $gutter-width;
+
+      &--small {
+        padding: $gutter-width / 2 $gutter-width;
+      }
+    }
+
+    &--inverse {
+      @include bg-darkest;
+
+      & .bui-card__body {
+        @include bg-darker;
+      }
+    }
+
+    &--primary {
+      background-color: $theme-primary;
+      color: $theme-lighter;
+
+      & .bui-card__body {
+        background-color: $theme-primary-light;
+        color: $theme-primary-dark;
+      }
+    }
+
+    &--go {
+      @include bg-go;
+
+      & .bui-card__body {
+        @include bg-go-light;
+      }
+    }
+
+    &--yo {
+      @include bg-yo;
+
+      & .bui-card__body {
+        @include bg-yo-light;
+      }
+    }
+
+    &--no {
+      @include bg-no;
+
+      & .bui-card__body {
+        @include bg-no-light;
+      }
+    }
+  }
+
+  &__escape {
+    margin: -$gutter-width;
+  }
+}

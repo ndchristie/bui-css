@@ -1,0 +1,79 @@
+@mixin bg-lightest {
+  background-color: $theme-lightest;
+  color: $theme-dark;
+}
+
+@mixin bg-lighter {
+  background-color: $theme-lighter;
+  color: $theme-dark;
+}
+
+@mixin bg-darkest {
+  background-color: $theme-darkest;
+  color: $theme-lighter;
+}
+
+@mixin bg-darker {
+  background-color: $theme-darker;
+  color: $theme-lighter;
+}
+
+@mixin bg-primary {
+  background-color: $theme-primary;
+  color: $theme-lighter;
+}
+
+@mixin bg-primary-light {
+  background-color: $theme-primary-light;
+  color: $theme-primary-dark;
+}
+
+@mixin bg-primary-dark {
+  background-color: $theme-primary-dark;
+  color: $theme-primary-light;
+}
+
+@mixin bg-go {
+  background-color: $theme-go;
+  color: $theme-lighter;
+}
+
+@mixin bg-go-light {
+  background-color: $theme-go-light;
+  color: $theme-go-dark;
+}
+
+@mixin bg-go-dark {
+  background-color: $theme-go-dark;
+  color: $theme-go-light;
+}
+
+@mixin bg-yo {
+  background-color: $theme-yo;
+  color: $theme-lighter;
+}
+
+@mixin bg-yo-light {
+  background-color: $theme-yo-light;
+  color: $theme-yo-dark;
+}
+
+@mixin bg-yo-dark {
+  background-color: $theme-yo-dark;
+  color: $theme-yo-light;
+}
+
+@mixin bg-no {
+  background-color: $theme-no;
+  color: $theme-lighter;
+}
+
+@mixin bg-no-light {
+  background-color: $theme-no-light;
+  color: $theme-no-dark;
+}
+
+@mixin bg-no-dark {
+  background-color: $theme-no-dark;
+  color: $theme-no-light;
+}

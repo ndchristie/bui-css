@@ -1,0 +1,14 @@
+@import 'normalize.css/';
+@import './bui/page';
+@import './bui/typography';
+@import './bui/card';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

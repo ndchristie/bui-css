@@ -1,0 +1,36 @@
+// gray scale
+$theme-lightest: #fff;
+$theme-ground: #f0f2f4;
+$theme-medium: #778;
+$theme-darkest: #333;
+
+@function theme-darken($color) {
+  @return saturate(mix($color, $theme-darkest, 60%), (saturation($color) - saturation($theme-darkest)) / 8);
+}
+
+@function theme-lighten($color) {
+  @return saturate(mix($color, $theme-lightest, 60%), (saturation($color) - saturation($theme-lightest)) / 8);
+}
+
+$theme-lighter: mix($theme-ground, $theme-lightest, 50%);
+$theme-light: mix($theme-ground, $theme-medium, 50%);
+$theme-dark: mix($theme-medium, $theme-darkest, 70%);
+$theme-darker: mix($theme-ground, $theme-darkest, 30%);
+
+// brand and links
+$theme-primary: #67a;
+$theme-primary-light: theme-lighten($theme-primary);
+$theme-primary-dark: theme-darken($theme-primary);
+
+// generic rolls
+$theme-go: #5cc;
+$theme-yo: #f8c060;
+$theme-no: #f66;
+
+$theme-go-light: theme-lighten($theme-go);
+$theme-go-dark: theme-darken($theme-go);
+$theme-yo-light: theme-lighten($theme-yo);
+$theme-yo-dark: theme-darken($theme-yo);
+$theme-no-light: theme-lighten($theme-no);
+$theme-no-dark: theme-darken($theme-no);
+

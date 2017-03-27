@@ -1,0 +1,18 @@
+@import '../vars/color';
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+*,
+*::before,
+*::after {
+  color: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bui {
+  &-body {
+    color: $theme-darker;
+    font-family: 'Lato', helvetica, arial, sans-serif;
+    font-size: 16px;
+  }
+}
