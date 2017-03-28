@@ -1,0 +1,77 @@
+@import '../vars/color';
+@import '../vars/fonts';
+@import '../mixins/fonts';
+
+.bui {
+  color: $theme-darker;
+
+  & * {
+    color: inherit;
+  }
+
+  &-heading {
+    @include body-font-bold;
+  }
+
+  /*
+  use of h# tags is somewhat discouraged.
+  however it remains prevalent, and we require
+  a reliable hierarchy.
+  */
+
+  & h1 {
+    font-size: $font-xxxl;
+  }
+
+  & h2 {
+    font-size: $font-xxl;
+  }
+
+  & h3 {
+    font-size: $font-xl;
+  }
+
+  & h4 {
+    font-size: $font-lg;
+  }
+
+  & h5 {
+    font-size: $font-md;
+  }
+
+  & h6 {
+    font-size: $font-sm;
+  }
+
+  &-body-text {
+    /*
+    this should already be covered by page rules.
+    it is included as a way to override subelements.
+    */
+    @include body-font;
+
+    font-size: $font-sm;
+  }
+
+  &-fineprint {
+    @include caption-font;
+
+    font-size: $font-xs;
+  }
+
+  &-heading,
+  &-body-text,
+  &-fineprint,
+  & address,
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  & legend,
+  & p,
+  & pre {
+    margin: 0 0 0.5em;
+  }
+}

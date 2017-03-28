@@ -40,9 +40,6 @@
     "stylelint": "^7.9.0",
     "stylelint-config-standard": "^16.0.0"
   },
-  "dependencies": {
-    "normalize.css": "^6.0.0"
-  },
   "files": [
     "lib/"
   ]

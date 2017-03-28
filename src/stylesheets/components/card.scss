@@ -1,6 +1,23 @@
 @import '../vars/metrics';
 @import '../mixins/color';
 
+.bui-card,
+address.bui-card,
+h1.bui-card,
+h2.bui-card,
+h3.bui-card,
+h4.bui-card,
+h5.bui-card,
+h6.bui-card,
+legend.bui-card,
+p.bui-card,
+pre.bui-card {
+  &__body,
+  &__heading {
+    margin: 0;
+  }
+}
+
 .bui {
   &-card {
     @include bg-lightest;
@@ -17,7 +34,6 @@
 
     &__body,
     &__heading {
-      margin: 0;
       padding: $gutter-width;
 
       &--small {

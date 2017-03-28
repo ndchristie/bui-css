@@ -1,9 +1,22 @@
 @import '../vars/color';
 @import '../vars/metrics';
+@import '../vars/fonts';
+@import '../mixins/fonts';
+
+*,
+*::before,
+*::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .bui {
   &-body {
+    @include body-font;
+
     background: $theme-ground;
+    font-size: $font-sm;
+    line-height: 1.5;
     margin: 0;
   }
 

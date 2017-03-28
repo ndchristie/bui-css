@@ -1,7 +1,6 @@
-@import 'normalize.css/';
-@import './bui/page';
-@import './bui/typography';
-@import './bui/card';
+@import './base/typography';
+@import './components/page';
+@import './components/card';
 
 html {
   box-sizing: border-box;

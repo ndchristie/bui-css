@@ -1,0 +1,16 @@
+@import '../vars/fonts';
+
+@mixin body-font {
+  font-family: $theme-body-font;
+  font-weight: normal;
+}
+
+@mixin body-font-bold {
+  font-family: $theme-body-font;
+  font-weight: bold;
+}
+
+@mixin caption-font {
+  font-family: $theme-caption-font;
+  font-weight: normal;
+}
