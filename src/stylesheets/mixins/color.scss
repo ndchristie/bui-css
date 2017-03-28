@@ -1,11 +1,31 @@
 @mixin bg-lightest {
   background-color: $theme-lightest;
-  color: $theme-dark;
+  color: $theme-darkest;
 }
 
 @mixin bg-lighter {
   background-color: $theme-lighter;
-  color: $theme-dark;
+  color: $theme-darkest;
+}
+
+@mixin bg-ground {
+  background-color: $theme-ground;
+  color: $theme-darkest;
+}
+
+@mixin bg-light {
+  background-color: $theme-light;
+  color: $theme-darkest;
+}
+
+@mixin bg-medium {
+  background-color: $theme-medium;
+  color: $theme-lighter;
+}
+
+@mixin bg-dark {
+  background-color: $theme-dark;
+  color: $theme-darkest;
 }
 
 @mixin bg-darkest {
@@ -20,7 +40,7 @@
 
 @mixin bg-primary {
   background-color: $theme-primary;
-  color: $theme-darkest;
+  color: $theme-lighter;
 }
 
 @mixin bg-primary-light {

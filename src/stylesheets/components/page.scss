@@ -22,6 +22,7 @@
 
   &-container {
     margin: 0 $gutter-width;
+    min-width: $bp-xs;
 
     @media (min-width: $bp-lg + $gutter-width * 2) {
       margin: 0 auto;

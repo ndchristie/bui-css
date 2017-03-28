@@ -3,7 +3,7 @@
 @import '../mixins/fonts';
 
 .bui {
-  color: $theme-darker;
+  color: $theme-darkest;
 
   & * {
     color: inherit;
@@ -72,6 +72,7 @@
   & legend,
   & p,
   & pre {
-    margin: 0 0 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0;
   }
 }

@@ -1,0 +1,47 @@
+@import '../vars/color';
+@import '../vars/metrics';
+@import '../mixins/color';
+
+.bui-btn {
+  @include body-font-bold;
+  @include bg-primary;
+
+  appearance: none;
+  border: none;
+  border-radius: 2px;
+  font-size: inherit;
+  padding: $gutter-width / 2;
+
+  &--inverse {
+    @include bg-primary-light;
+  }
+
+  &--go {
+    @include bg-go;
+
+    &.bui-btn--inverse {
+      @include bg-go-light;
+    }
+  }
+
+  &--yo {
+    @include bg-yo;
+
+    &.bui-btn--inverse {
+      @include bg-yo-light;
+    }
+  }
+
+  &--no {
+    @include bg-no;
+
+    &.bui-btn--inverse {
+      @include bg-no-light;
+    }
+  }
+
+  &[disabled] {
+    background-color: $theme-light;
+    color: $theme-medium;
+  }
+}

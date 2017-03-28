@@ -13,8 +13,8 @@ $theme-darkest: #333;
 }
 
 $theme-lighter: mix($theme-ground, $theme-lightest, 50%);
-$theme-light: mix($theme-ground, $theme-medium, 50%);
-$theme-dark: mix($theme-medium, $theme-darkest, 75%);
+$theme-light: mix($theme-ground, $theme-medium, 80%);
+$theme-dark: mix($theme-medium, $theme-darkest, 80%);
 $theme-darker: mix($theme-medium, $theme-darkest, 50%);
 
 // branding
