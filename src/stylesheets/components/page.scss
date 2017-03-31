@@ -10,23 +10,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.bui {
-  &-body {
-    @include body-font;
+.bui-body {
+  @include body-font;
+  @include bg-ground;
 
-    background: $theme-ground;
-    font-size: $font-sm;
-    line-height: 1.5;
-    margin: 0;
+  font-size: $font-sm;
+  line-height: 1.5;
+  margin: 0;
+
+  &--flat {
+    @include bg-lightest;
+  }
+}
+
+.bui-container {
+  margin: 0 $gutter-width;
+  min-width: $bp-xs;
+
+  @media (min-width: $bp-md + $gutter-width * 2) {
+    margin: 0 auto;
+    max-width: $bp-md;
   }
 
-  &-container {
-    margin: 0 $gutter-width;
-    min-width: $bp-xs;
-
-    @media (min-width: $bp-lg + $gutter-width * 2) {
-      margin: 0 auto;
-      max-width: $bp-lg;
-    }
+  & > :not(.bui-card) {
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
   }
 }

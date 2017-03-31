@@ -18,71 +18,74 @@ pre.bui-card {
   }
 }
 
-.bui {
-  &-card {
-    @include bg-lightest;
+.bui-card {
+  @include bg-lightest;
 
-    box-shadow: 0 8px 1px -4px transparentize($theme-darkest, 0.95);
-    border-radius: 2px;
-    list-style: none;
-    margin: $gutter-width 0;
-    overflow: auto;
+  box-shadow: 0 8px 1px -4px transparentize($theme-darkest, 0.95);
+  border-radius: 2px;
+  list-style: none;
+  margin: $gutter-width 0;
+  overflow: auto;
+  position: relative;
 
-    &__body {
-      @include bg-lighter;
-    }
+  .bui-body--flat & {
+    box-shadow: none;
+  }
 
-    &__body,
-    &__heading {
-      padding: $gutter-width;
+  &__body {
+    @include bg-lighter;
 
-      &--small {
-        padding: $gutter-width / 2 $gutter-width;
-      }
-    }
-
-    &--inverse {
-      @include bg-darkest;
-
-      & .bui-card__body {
-        @include bg-darker;
-      }
-    }
-
-    &--primary {
-      @include bg-primary;
-
-      & .bui-card__body {
-        @include bg-primary-light;
-      }
-    }
-
-    &--go {
-      @include bg-go;
-
-      & .bui-card__body {
-        @include bg-go-light;
-      }
-    }
-
-    &--yo {
-      @include bg-yo;
-
-      & .bui-card__body {
-        @include bg-yo-light;
-      }
-    }
-
-    &--no {
-      @include bg-no;
-
-      & .bui-card__body {
-        @include bg-no-light;
-      }
+    .bui-body--flat & {
+      @include bg-lightest;
     }
   }
 
-  &__escape {
-    margin: -$gutter-width;
+  &__body,
+  &__heading {
+    padding: $gutter-width;
+
+    &--small {
+      padding: $gutter-width / 2 $gutter-width;
+    }
+  }
+
+  &--inverse {
+    @include bg-darkest;
+
+    & .bui-card__body {
+      @include bg-darker;
+    }
+  }
+
+  &--primary {
+    @include bg-primary;
+
+    & .bui-card__body {
+      @include bg-primary-light;
+    }
+  }
+
+  &--go {
+    @include bg-go;
+
+    & .bui-card__body {
+      @include bg-go-light;
+    }
+  }
+
+  &--yo {
+    @include bg-yo;
+
+    & .bui-card__body {
+      @include bg-yo-light;
+    }
+  }
+
+  &--no {
+    @include bg-no;
+
+    & .bui-card__body {
+      @include bg-no-light;
+    }
   }
 }
