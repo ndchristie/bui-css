@@ -21,7 +21,9 @@ pre.bui-card {
 .bui-card {
   @include bg-lightest;
 
-  box-shadow: 0 8px 1px -4px transparentize($theme-darkest, 0.95);
+  box-shadow:
+    0 8px 0 -4px transparentize($theme-darkest, 0.95),
+    0 0 0 1px transparentize($theme-darkest, 0.95);
   border-radius: 2px;
   list-style: none;
   margin: $gutter-width 0;

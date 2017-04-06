@@ -1,0 +1,64 @@
+@import '../vars/color';
+@import '../vars/fonts';
+@import '../vars/metrics';
+@import '../mixins/container';
+
+.bui-nav {
+  &--inverse {
+    @include bg-darkest;
+
+    & .bui-card__body {
+      @include bg-darker;
+    }
+  }
+
+  &--primary {
+    @include bg-primary;
+
+    & .bui-card__body {
+      @include bg-primary-light;
+    }
+  }
+}
+
+.bui-navbar {
+  box-shadow: 0 4px transparentize($theme-darkest, 0.95);
+  margin: 0 0 $gutter-width;
+
+  &__inner {
+    @include container;
+
+    font-size: $font-lg;
+    padding-top: $gutter-width;
+    padding-bottom: $gutter-width;
+
+    &--small {
+      font-size: $font-md;
+      padding-top: $gutter-width / 2;
+      padding-bottom: $gutter-width / 2;
+    }
+
+    address,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    legend,
+    p,
+    pre,
+    ul,
+    ol,
+    dl {
+      font-size: inherit;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      &,
+      & * {
+        text-decoration: none;
+      }
+    }
+  }
+}

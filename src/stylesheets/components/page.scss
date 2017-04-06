@@ -1,6 +1,7 @@
 @import '../vars/color';
 @import '../vars/metrics';
 @import '../vars/fonts';
+@import '../mixins/container';
 @import '../mixins/fonts';
 
 *,
@@ -24,16 +25,5 @@
 }
 
 .bui-container {
-  margin: 0 $gutter-width;
-  min-width: $bp-xs;
-
-  @media (min-width: $bp-md + $gutter-width * 2) {
-    margin: 0 auto;
-    max-width: $bp-md;
-  }
-
-  & > :not(.bui-card) {
-    padding-left: $gutter-width;
-    padding-right: $gutter-width;
-  }
+  @include container;
 }

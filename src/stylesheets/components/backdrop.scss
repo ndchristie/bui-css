@@ -22,41 +22,21 @@
 
   &--inverse {
     @include bg-darkest;
-
-    & .bui-card__body {
-      @include bg-darker;
-    }
   }
 
   &--primary {
     @include bg-primary-dark;
-
-    & .bui-card__body {
-      @include bg-primary-light;
-    }
   }
 
   &--go {
     @include bg-go-dark;
-
-    & .bui-card__body {
-      @include bg-go-light;
-    }
   }
 
   &--yo {
     @include bg-yo-dark;
-
-    & .bui-card__body {
-      @include bg-yo-light;
-    }
   }
 
   &--no {
     @include bg-no-dark;
-
-    & .bui-card__body {
-      @include bg-no-light;
-    }
   }
 }
