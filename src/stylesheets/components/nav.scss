@@ -3,7 +3,37 @@
 @import '../vars/metrics';
 @import '../mixins/container';
 
+ul.bui-nav,
 .bui-nav {
+  list-style: none;
+}
+
+.bui-navbar__nav,
+.bui-nav--inline {
+  & > li {
+    display: inline-block;
+    margin: 0 $gutter-width / 2;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.bui-navbar {
+  @include bg-lighter;
+
+  box-shadow: 0 4px transparentize($theme-darkest, 0.95);
+  margin: 0 0 $gutter-width;
+
+  .bui-body--flat & {
+    box-shadow: none;
+  }
+
   &--inverse {
     @include bg-darkest;
 
@@ -19,14 +49,10 @@
       @include bg-primary-light;
     }
   }
-}
-
-.bui-navbar {
-  box-shadow: 0 4px transparentize($theme-darkest, 0.95);
-  margin: 0 0 $gutter-width;
 
   &__inner {
     @include container;
+    @include flex-row(':first-child');
 
     font-size: $font-lg;
     padding-top: $gutter-width;
