@@ -7,7 +7,7 @@
     max-width: $bp-md;
   }
 
-  & > :not(.bui-card) {
+  .bui-body--flat & > :not(.bui-card) {
     padding-left: $gutter-width;
     padding-right: $gutter-width;
   }

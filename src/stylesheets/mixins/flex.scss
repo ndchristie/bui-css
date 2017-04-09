@@ -1,7 +1,6 @@
 @mixin flex-row($fluid-selector) {
   align-items: middle;
   display: flex;
-  overflow: hidden;
 
   & > * {
     flex-grow: 0;
@@ -10,5 +9,11 @@
   & > #{$fluid-selector} {
     flex-grow: 1;
     width: auto;
+  }
+
+  @media (min-width: $bp-md) {
+    & > * {
+      flex-shrink: 0;
+    }
   }
 }

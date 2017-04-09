@@ -1,26 +1,7 @@
 @import '../vars/metrics';
 @import '../mixins/color';
 
-.bui-card,
-address.bui-card,
-h1.bui-card,
-h2.bui-card,
-h3.bui-card,
-h4.bui-card,
-h5.bui-card,
-h6.bui-card,
-legend.bui-card,
-p.bui-card,
-pre.bui-card {
-  &__body,
-  &__heading {
-    margin: 0;
-  }
-}
-
 .bui-card {
-  @include bg-lightest;
-
   box-shadow:
     0 8px 0 -4px transparentize($theme-darkest, 0.95),
     0 0 0 1px transparentize($theme-darkest, 0.95);
@@ -34,59 +15,42 @@ pre.bui-card {
     box-shadow: none;
   }
 
-  &__body {
-    @include bg-lighter;
-
-    .bui-body--flat & {
-      @include bg-lightest;
-    }
-  }
-
   &__body,
   &__heading {
     padding: $gutter-width;
+    margin: 0;
 
     &--small {
       padding: $gutter-width / 2 $gutter-width;
     }
   }
 
-  &--inverse {
-    @include bg-darkest;
+  &__body {
+    .bui-ctx & {
+      @include bg-lighter;
+    }
 
-    & .bui-card__body {
+    .bui-body--flat & {
+      background: inherit;
+    }
+
+    .bui-ctx--inverse & {
       @include bg-darker;
     }
-  }
 
-  &--primary {
-    @include bg-primary;
-
-    & .bui-card__body {
+    .bui-ctx--primary & {
       @include bg-primary-light;
     }
-  }
 
-  &--go {
-    @include bg-go;
-
-    & .bui-card__body {
+    .bui-ctx--go & {
       @include bg-go-light;
     }
-  }
 
-  &--yo {
-    @include bg-yo;
-
-    & .bui-card__body {
+    .bui-ctx--yo & {
       @include bg-yo-light;
     }
-  }
 
-  &--no {
-    @include bg-no;
-
-    & .bui-card__body {
+    .bui-ctx--no & {
       @include bg-no-light;
     }
   }

@@ -54,6 +54,7 @@ ul.bui-nav,
     @include container;
     @include flex-row(':first-child');
 
+    flex-wrap: wrap;
     font-size: $font-lg;
     padding-top: $gutter-width;
     padding-bottom: $gutter-width;
@@ -64,27 +65,11 @@ ul.bui-nav,
       padding-bottom: $gutter-width / 2;
     }
 
-    address,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    legend,
-    p,
-    pre,
-    ul,
-    ol,
-    dl {
+    & * {
+      text-decoration: none;
       font-size: inherit;
       margin-top: 0;
       margin-bottom: 0;
-
-      &,
-      & * {
-        text-decoration: none;
-      }
     }
   }
 }

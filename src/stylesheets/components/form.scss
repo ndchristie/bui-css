@@ -12,7 +12,8 @@
     }
   }
 
-  &-label {
+  &-label,
+  &-help {
     @include body-font-bold;
 
     display: inline-block;
@@ -22,10 +23,6 @@
 
   &-help {
     @include caption-font;
-
-    display: inline-block;
-    font-size: $font-xs;
-    margin: $gutter-width / 4 $gutter-width / 2;
   }
 }
 
@@ -37,7 +34,7 @@
 
   & > * {
     display: inline-block;
-    height: 2.5rem;
+    min-height: 2.5rem;
     padding-left: $gutter-width / 2;
     padding-right: $gutter-width / 2;
 
@@ -64,7 +61,7 @@
     inset 0 0 0 1px transparentize($theme-darkest, 0.95);
   display: inline-block;
   font-size: inherit;
-  height: 2.5rem;
+  min-height: 2.5rem;
   padding: 0.5rem $gutter-width / 2;
   width: 100%;
 
@@ -72,13 +69,17 @@
     @include bg-lighter;
   }
 
-  &--textarea {
-    height: 5em;
-    resize: vertical;
-  }
-
   &[disabled],
   &--read-only {
     @include bg-ground;
   }
+}
+
+select.bui-input {
+  height: 2.5rem;
+}
+
+textarea.bui-input {
+  height: 5em;
+  resize: vertical;
 }

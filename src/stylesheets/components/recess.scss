@@ -1,0 +1,8 @@
+.bui-recess {
+  margin: -$gutter-width auto;
+  z-index: -1;
+
+  & > .bui-container {
+    padding: #{$gutter-width * 2} 0;
+  }
+}

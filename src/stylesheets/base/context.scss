@@ -1,0 +1,26 @@
+@import '../vars/metrics';
+@import '../mixins/color';
+
+.bui-ctx {
+  @include bg-lightest;
+
+  &--inverse {
+    @include bg-darkest;
+  }
+
+  &--primary {
+    @include bg-primary;
+  }
+
+  &--go {
+    @include bg-go;
+  }
+
+  &--yo {
+    @include bg-yo;
+  }
+
+  &--no {
+    @include bg-no;
+  }
+}
