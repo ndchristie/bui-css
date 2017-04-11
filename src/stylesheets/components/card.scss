@@ -1,7 +1,10 @@
 @import '../vars/metrics';
 @import '../mixins/color';
+@import '../mixins/context';
 
 .bui-card {
+  @include context;
+
   box-shadow:
     0 8px 0 -4px transparentize($theme-darkest, 0.95),
     0 0 0 1px transparentize($theme-darkest, 0.95);
@@ -26,32 +29,6 @@
   }
 
   &__body {
-    .bui-ctx & {
-      @include bg-lighter;
-    }
-
-    .bui-body--flat & {
-      background: inherit;
-    }
-
-    .bui-ctx--inverse & {
-      @include bg-darker;
-    }
-
-    .bui-ctx--primary & {
-      @include bg-primary-light;
-    }
-
-    .bui-ctx--go & {
-      @include bg-go-light;
-    }
-
-    .bui-ctx--yo & {
-      @include bg-yo-light;
-    }
-
-    .bui-ctx--no & {
-      @include bg-no-light;
-    }
+    @include context($map: $context-light, $ancestor: '.bui-card');
   }
 }

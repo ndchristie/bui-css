@@ -5,10 +5,6 @@
 .bui {
   color: $theme-darkest;
 
-  & * {
-    color: inherit;
-  }
-
   &-heading {
     @include body-font-bold;
   }
@@ -75,6 +71,10 @@ p,
 pre {
   margin-bottom: 0.5em;
   margin-top: 0;
+}
+
+a {
+  color: $theme-primary;
 }
 
 a:hover {

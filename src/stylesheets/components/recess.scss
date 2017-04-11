@@ -1,4 +1,8 @@
+@import '../mixins/context';
+
 .bui-recess {
+  @include context($map: $context-dark);
+
   margin: -$gutter-width auto;
   z-index: -1;
 

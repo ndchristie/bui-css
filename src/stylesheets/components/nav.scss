@@ -2,6 +2,7 @@
 @import '../vars/fonts';
 @import '../vars/metrics';
 @import '../mixins/container';
+@import '../mixins/context';
 
 ul.bui-nav,
 .bui-nav {
@@ -25,29 +26,13 @@ ul.bui-nav,
 }
 
 .bui-navbar {
-  @include bg-lighter;
+  @include context;
 
   box-shadow: 0 4px transparentize($theme-darkest, 0.95);
   margin: 0 0 $gutter-width;
 
   .bui-body--flat & {
     box-shadow: none;
-  }
-
-  &--inverse {
-    @include bg-darkest;
-
-    & .bui-card__body {
-      @include bg-darker;
-    }
-  }
-
-  &--primary {
-    @include bg-primary;
-
-    & .bui-card__body {
-      @include bg-primary-light;
-    }
   }
 
   &__inner {

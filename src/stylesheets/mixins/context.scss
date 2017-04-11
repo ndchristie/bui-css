@@ -1,0 +1,40 @@
+@import '../vars/metrics';
+@import '../vars/color';
+
+$context-regular: (
+  '--default': ($theme-lightest, $theme-darker),
+  '--inverse': ($theme-darkest, $theme-lighter),
+  '--primary': ($theme-primary, $theme-lighter),
+  '--go': ($theme-go, $theme-darkest),
+  '--yo': ($theme-yo, $theme-darkest),
+  '--no': ($theme-no, $theme-darkest),
+);
+
+$context-light: (
+  '--default': ($theme-lighter, $theme-darker),
+  '--inverse': ($theme-darker, $theme-lighter),
+  '--primary': ($theme-primary-light, $theme-primary-dark),
+  '--go': ($theme-go-light, $theme-go-dark),
+  '--yo': ($theme-yo-light, $theme-yo-dark),
+  '--no': ($theme-no-light, $theme-no-dark),
+);
+
+$context-dark: (
+  '--default': ($theme-light, $theme-darkest),
+  '--inverse': ($theme-darkest, $theme-lighter),
+  '--primary': ($theme-primary-dark, $theme-lighter),
+  '--go': ($theme-go-dark, $theme-lighter),
+  '--yo': ($theme-yo-dark, $theme-lighter),
+  '--no': ($theme-no-dark, $theme-lighter),
+);
+
+@mixin context($ancestor: false, $map: $context-regular) {
+  @each $subselector, $values in $map {
+    $selector: if($ancestor, #{$ancestor + $subselector + ' &'}, #{'&' + $subselector});
+
+    #{$selector} {
+      background-color: nth($values, 1);
+      color: nth($values, 2);
+    }
+  }
+}

@@ -54,6 +54,7 @@
   @include bg-lightest;
   @include body-font;
 
+  z-index: 100000000;
   border: none;
   border-radius: 2px;
   box-shadow:

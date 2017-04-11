@@ -1,3 +1,5 @@
+@import '../vars/color';
+
 @mixin bg-lightest {
   background-color: $theme-lightest;
   color: $theme-darkest;

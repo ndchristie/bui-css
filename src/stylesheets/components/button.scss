@@ -1,10 +1,11 @@
 @import '../vars/color';
 @import '../vars/metrics';
 @import '../mixins/color';
+@import '../mixins/context';
 
 .bui-btn {
   @include body-font-bold;
-  @include bg-primary;
+  @include context;
 
   appearance: none;
   border: none;
@@ -14,34 +15,6 @@
     inset 0 0 0 1px transparentize($theme-darkest, 0.95);
   font-size: inherit;
   padding: 0.25em $gutter-width / 2 0.5em;
-
-  &--inverse {
-    @include bg-primary-light;
-  }
-
-  &--go {
-    @include bg-go;
-
-    &.bui-btn--inverse {
-      @include bg-go-light;
-    }
-  }
-
-  &--yo {
-    @include bg-yo;
-
-    &.bui-btn--inverse {
-      @include bg-yo-light;
-    }
-  }
-
-  &--no {
-    @include bg-no;
-
-    &.bui-btn--inverse {
-      @include bg-no-light;
-    }
-  }
 
   &[disabled] {
     background-color: $theme-light;
