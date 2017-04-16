@@ -14,25 +14,25 @@
   overflow: auto;
   position: relative;
 
-  .bui-body--flat & {
+  ._flat & {
     box-shadow: none;
   }
+}
 
-  &__body,
-  &__heading {
-    padding: $gutter-width;
-    margin: 0;
+.bui-card-body,
+.bui-card-heading {
+  padding: $gutter-width;
+  margin: 0;
 
-    &--small {
-      padding: $gutter-width / 2 $gutter-width;
-    }
+  &._minor {
+    padding: $gutter-width / 2 $gutter-width;
   }
+}
 
-  &__body {
-    @include context($map: $context-light, $ancestor: '.bui-card');
+.bui-card-body {
+  @include context($map: $context-light, $ancestor: '.bui-card');
 
-    .bui-body--flat .bui-card--default > & {
-      background-color: inherit;
-    }
+  ._flat .bui-card._default & {
+    background-color: inherit;
   }
 }

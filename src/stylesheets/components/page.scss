@@ -19,7 +19,7 @@
   line-height: 1.5;
   margin: 0;
 
-  &--flat {
+  &._flat {
     @include bg-lightest;
   }
 }

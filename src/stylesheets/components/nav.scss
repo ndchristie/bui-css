@@ -9,8 +9,8 @@ ul.bui-nav,
   list-style: none;
 }
 
-.bui-navbar__nav,
-.bui-nav--inline {
+.bui-navbar-nav,
+.bui-nav._minor {
   & > li {
     display: inline-block;
     margin: 0 $gutter-width / 2;
@@ -31,30 +31,30 @@ ul.bui-nav,
   box-shadow: 0 4px transparentize($theme-darkest, 0.95);
   margin: 0 0 $gutter-width;
 
-  .bui-body--flat & {
+  ._flat & {
     box-shadow: none;
   }
+}
 
-  &__inner {
-    @include container;
-    @include flex-row(':first-child');
+.bui-navbar-inner {
+  @include container;
+  @include flex-row(':first-child');
 
-    flex-wrap: wrap;
-    font-size: $font-lg;
-    padding-top: $gutter-width;
-    padding-bottom: $gutter-width;
+  flex-wrap: wrap;
+  font-size: $font-lg;
+  padding-top: $gutter-width;
+  padding-bottom: $gutter-width;
 
-    &--small {
-      font-size: $font-md;
-      padding-top: $gutter-width / 2;
-      padding-bottom: $gutter-width / 2;
-    }
+  &._minor {
+    font-size: $font-md;
+    padding-top: $gutter-width / 2;
+    padding-bottom: $gutter-width / 2;
+  }
 
-    & * {
-      text-decoration: none;
-      font-size: inherit;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
+  & * {
+    text-decoration: none;
+    font-size: inherit;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }

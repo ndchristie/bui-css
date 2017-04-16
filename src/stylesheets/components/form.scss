@@ -5,25 +5,25 @@
 
 .bui-form {
   line-height: 2.5rem;
+}
 
-  &-row {
-    &:not(:last-child) {
-      margin: 0 0 $gutter-width;
-    }
+.bui-form-row {
+  &:not(:last-child) {
+    margin: 0 0 $gutter-width;
   }
+}
 
-  &-label,
-  &-help {
-    @include body-font-bold;
+.bui-form-label,
+.bui-form-help {
+  @include body-font-bold;
 
-    display: inline-block;
-    font-size: $font-xs;
-    margin: 0 $gutter-width / 2 $gutter-width / 4;
-  }
+  display: inline-block;
+  font-size: $font-xs;
+  margin: 0 $gutter-width / 2 $gutter-width / 4;
+}
 
-  &-help {
-    @include caption-font;
-  }
+.bui-form-help {
+  @include caption-font;
 }
 
 .bui-input-group {
@@ -66,12 +66,12 @@
   padding: 0.5rem $gutter-width / 2;
   width: 100%;
 
-  .bui-body--flat & {
+  ._flat & {
     @include bg-lighter;
   }
 
   &[disabled],
-  &--read-only {
+  &._read-only {
     @include bg-ground;
   }
 }
