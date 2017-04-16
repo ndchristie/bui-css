@@ -19,7 +19,7 @@
   }
 }
 
-.bui-card-body,
+.bui-card-content,
 .bui-card-heading {
   padding: $gutter-width;
   margin: 0;
@@ -29,10 +29,22 @@
   }
 }
 
-.bui-card-body {
+.bui-card-content {
   @include context($map: $context-light, $ancestor: '.bui-card');
 
   ._flat .bui-card._default & {
     background-color: inherit;
+  }
+
+  &._list {
+    padding: 0;
+
+    & > li {
+      padding: $gutter-width;
+    }
+
+    &._minor > li {
+      padding: $gutter-width / 2 $gutter-width;
+    }
   }
 }
