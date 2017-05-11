@@ -2,10 +2,9 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-const del = require('del');
 // postcss block
 const postcss = require('gulp-postcss');
-const cssnext = require("postcss-cssnext");
+const cssnext = require('postcss-cssnext');
 const normalizeCharset = require('postcss-normalize-charset');
 const minifySelectors = require('postcss-minify-selectors');
 const minifyFontValues = require('postcss-minify-font-values');
@@ -17,7 +16,7 @@ const discardDuplicates = require('postcss-discard-duplicates');
 const discardComments = require('postcss-discard-comments');
 const convertValues = require('postcss-convert-values');
 const mergeSelectors = require('postcss-merge-selectors');
-const cssnano = require("cssnano");
+const cssnano = require('cssnano');
 
 const plugins = [
   cssnext(),
@@ -34,20 +33,18 @@ const plugins = [
   convertValues(),
 ];
 
-gulp.task('css', function () {
-  return gulp.src('src/stylesheets/bui.scss')
+gulp.task('css', () => gulp.src('src/stylesheets/bui.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(plugins))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('lib/css'));
-});
+    .pipe(gulp.dest('lib/css')),
+  );
 
-gulp.task('css:min', function () {
-  return gulp.src('lib/**/!(*.min).css')
+gulp.task('css:min', () => gulp.src('lib/**/!(*.min).css')
     .pipe(sourcemaps.init())
     .pipe(postcss([cssnano({ autoprefixer: false })]))
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('lib'));
-});
+    .pipe(gulp.dest('lib')),
+  );
