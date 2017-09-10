@@ -1,36 +1,82 @@
-// gray scale
-$theme-lightest: #fff;
-$theme-ground: #eee;
-$theme-medium: #778;
-$theme-darkest: #333;
+/* Greyscale */
+$c-black: #000; /* Shark */
+$c-dark: #222; /* Shark */
+$c-dark-shadow: rgba(34, 34, 34, 0.87);
+$c-deep: #555; /* Chicago */
+$c-deep-shadow: rgba(34, 34, 34, 0.69);
+$c-bold: #ccc; /* Cloud */
+$c-bold-shadow: rgba(34, 34, 34, 0.25);
+$c-soft: #eee; /* Gallery */
+$c-soft-shadow: rgba(34, 34, 34, 0.06);
+$c-white: #fff; /* White */
 
-@function theme-darken($color) {
-  @return saturate(mix($color, $theme-darkest, 33.3333%), (saturation($color) - saturation($theme-darkest)) / 6);
+@mixin white {
+  background-color: $c-white;
+  color: $c-deep;
+
+  & .title {
+    color: $c-dark;
+  }
 }
 
-@function theme-lighten($color) {
-  @return saturate(mix($color, $theme-lightest, 33.3333%), (saturation($color) - saturation($theme-lightest)) / 6);
+@mixin soft {
+  background-color: $c-soft;
+  color: $c-deep;
+
+  & .title {
+    color: $c-dark;
+  }
 }
 
-$theme-lighter: mix($theme-ground, $theme-lightest, 50%);
-$theme-light: mix($theme-ground, $theme-medium, 80%);
-$theme-dark: mix($theme-medium, $theme-darkest, 80%);
-$theme-darker: mix($theme-medium, $theme-darkest, 50%);
+@mixin bold {
+  background-color: $c-bold;
+  color: $c-dark;
+}
 
-// branding
-$theme-primary: #569;
-$theme-primary-light: theme-lighten($theme-primary);
-$theme-primary-dark: theme-darken($theme-primary);
+@mixin deep {
+  background-color: $c-deep;
+  color: $c-soft;
 
-// stoplight colors
-$theme-go: #5cc;
-$theme-yo: #f8c060;
-$theme-no: #f76;
+  & .title {
+    color: $c-white;
+  }
+}
 
-$theme-go-light: theme-lighten($theme-go);
-$theme-go-dark: theme-darken($theme-go);
-$theme-yo-light: theme-lighten($theme-yo);
-$theme-yo-dark: theme-darken($theme-yo);
-$theme-no-light: theme-lighten($theme-no);
-$theme-no-dark: theme-darken($theme-no);
+@mixin dark {
+  background-color: $c-dark;
+  color: $c-soft;
 
+  & .title {
+    color: $c-white;
+  }
+}
+
+/* Error : Red */
+$c-bad-dark: #510; /* Redwood */
+$c-bad-deep: #932; /* Totem Pole */
+$c-bad-bold: #f75; /* Persimmon */
+$c-bad-soft: #fdc; /* Tuft Bush */
+
+/* Warning : Yellow */
+$c-warn-dark: #430; /* Madras */
+$c-warn-deep: #864; /* Kumera */
+$c-warn-bold: #fc5; /* Golden Tainoi */
+$c-warn-soft: #fec; /* Oasis */
+
+/* Success : Green */
+$c-good-dark: #233; /* Outer Space */
+$c-good-deep: #187; /* Pine Green */
+$c-good-bold: #6db; /* Puerto Rico */
+$c-good-soft: #d4f4e4; /* Granny Apple */
+
+/* Primary : Blue */
+$c-main-dark: #235; /* Cello */
+$c-main-deep: #26a; /* Matisse */
+$c-main-bold: #9cf; /* Malibu */
+$c-main-soft: #def; /* Link Water */
+
+/* Extras : Violet */
+$c-extra-dark: #423; /* Livid Brown */
+$c-extra-deep: #746; /* Cosmic */
+$c-extra-bold: #dad; /* Light Wisteria */
+$c-extra-soft: #edf; /* Moon Raker */
