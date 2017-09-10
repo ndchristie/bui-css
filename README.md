@@ -29,12 +29,6 @@ Bui also helps users with common types of colorblindness.  By shifting the class
 
 As of 0.4.0, Bui does not have any runtime dependencies.
 
-### Raised Or Flat, On-Demand
-
-Cards are a fundamental structural element in contemporary interfaces.  They represent both an aesthetic bridge between analogous and flat design and an opportunity for dynamic, logically-grouped content in their own right.  Cards naturally play a significant role in Bui's design language.
-
-However, a single-line change instantly flattens all of the visual styles, without affecting metrics or readability.  So you can instantly switch between styles, or even let your users choose or themselves.
-
 ## Frequently Asked Questions
 
 ### How is "bui" pronounced?

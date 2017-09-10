@@ -1,0 +1,27 @@
+@import '../vars/metrics';
+
+.table,
+.list {
+  border-collapse: collapse;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+
+  tr,
+  li,
+  .row,
+  .list-item {
+    border: none;
+    border-bottom: 1px solid transparent;
+    position: relative;
+
+    ._striped &:nth-child(2n) {
+      background-color: mix($c-soft-shadow, transparent, 50%);
+    }
+  }
+
+  th,
+  td {
+    @extend .tile;
+  }
+}

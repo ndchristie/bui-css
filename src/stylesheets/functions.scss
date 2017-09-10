@@ -1,0 +1,7 @@
+@function lerp($a, $b, $weight: 0.5) {
+  @return $b + ($a - $b) * $weight;
+}
+
+@function inverseLerp($a, $b, $c: ($a + $b) / 2) {
+  @return ($a - $b) / ($c - $b);
+}

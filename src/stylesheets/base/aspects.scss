@@ -1,0 +1,30 @@
+$aspects: (
+  21: 9,
+  16: 9,
+  15: 10,
+  7: 5,
+  5: 3,
+  4: 3,
+  3: 2,
+  2: 1,
+);
+
+[class*="-ex-"] {
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    display: block;
+  }
+}
+
+@each $x, $y in $aspects {
+  ._#{$x}-ex-#{$y}::before {
+    padding-top: #{$y / $x * 100%};
+  }
+
+  ._#{$y}-ex-#{$x}::before {
+    padding-top: #{$x / $y * 100%};
+  }
+}

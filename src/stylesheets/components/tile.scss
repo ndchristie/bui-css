@@ -1,0 +1,19 @@
+@import '../vars/color';
+@import '../vars/metrics';
+
+.tile {
+  padding: $sp-sm $sp-md;
+  max-width: $bp-md;
+  margin: auto;
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+
+  &:first-child {
+    padding-top: $sp-md;
+  }
+
+  &:last-child {
+    padding-bottom: $sp-md;
+  }
+}

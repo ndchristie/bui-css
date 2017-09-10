@@ -1,14 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
-@import url('https://fonts.googleapis.com/css?family=Arimo');
 @import './base/typography';
-@import './components/button';
-@import './components/recess';
 @import './base/container';
+@import './base/aspects';
 @import './components/nav';
-@import './components/page';
+@import './components/recess';
+@import './components/tile';
+@import './components/table';
+@import './components/button';
+@import './components/input';
 
-html {
+html,
+body {
+  // background-color: mix($c-white, $c-soft);
   box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 *,
