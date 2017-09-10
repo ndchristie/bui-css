@@ -1,6 +1,17 @@
-$gutter-width: 20px;
+$sp-md: 24px;
+$sp-sm: 12px;
+$sp-xs: 9px;
 
-$bp-xs: 320px;
-$bp-sm: 480px;
-$bp-md: 980px;
-$bp-lg: 1440px;
+$bp-lg: 1280px;
+$bp-md: 880px;
+
+$ty-n: 4px;
+
+$ty-base: 15px;
+$ty-xs: $ty-base - $ty-n;
+$ty-sm: $ty-base;
+$ty-md: $ty-base + $ty-n * 1;
+$ty-lg: $ty-base + $ty-n * 2;
+$ty-xl: $ty-base + $ty-n * 3;
+$ty-xxl: $ty-base + $ty-n * 5;
+$ty-xxxl: $ty-base + $ty-n * 8;

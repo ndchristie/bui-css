@@ -1,0 +1,150 @@
+@import '../vars/color';
+
+.container {
+  margin: $sp-sm auto;
+  max-width: $bp-md;
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+}
+
+._default,
+._white {
+  @include white;
+}
+
+._soft {
+  @include soft;
+}
+
+._good {
+  background-color: $c-good-soft;
+  color: $c-good-deep;
+
+  & .title {
+    color: $c-good-dark;
+  }
+}
+
+._bad {
+  background-color: $c-bad-soft;
+  color: $c-bad-deep;
+
+  & .title {
+    color: $c-bad-dark;
+  }
+}
+
+._warn {
+  background-color: $c-warn-soft;
+  color: $c-warn-deep;
+
+  & .title {
+    color: $c-warn-dark;
+  }
+}
+
+._main {
+  background-color: $c-main-soft;
+  color: $c-main-deep;
+
+  & .title {
+    color: $c-main-dark;
+  }
+}
+
+._extra {
+  background-color: $c-extra-soft;
+  color: $c-extra-deep;
+
+  & .title {
+    color: $c-extra-dark;
+  }
+}
+
+._bold {
+  @include deep;
+
+  &._main {
+    background-color: $c-main-bold;
+    color: $c-main-dark;
+  }
+
+  &._good {
+    background-color: $c-good-bold;
+    color: $c-good-dark;
+  }
+
+  &._warn {
+    background-color: $c-warn-bold;
+    color: $c-warn-dark;
+  }
+
+  &._bad {
+    background-color: $c-bad-bold;
+    color: $c-bad-dark;
+  }
+
+  &._extra {
+    background-color: $c-extra-bold;
+    color: $c-extra-dark;
+  }
+}
+
+._deep {
+  @include deep;
+
+  &._main {
+    background-color: $c-main-deep;
+    color: $c-main-soft;
+  }
+
+  &._good {
+    background-color: $c-good-deep;
+    color: $c-good-soft;
+  }
+
+  &._warn {
+    background-color: $c-warn-deep;
+    color: $c-warn-soft;
+  }
+
+  &._bad {
+    background-color: $c-bad-deep;
+    color: $c-bad-soft;
+  }
+
+  &._extra {
+    background-color: $c-extra-deep;
+    color: $c-extra-soft;
+  }
+}
+
+._dark {
+  @include dark;
+
+  &._main {
+    background-color: $c-main-dark;
+    color: $c-main-soft;
+  }
+
+  &._good {
+    background-color: $c-good-dark;
+    color: $c-good-soft;
+  }
+
+  &._warn {
+    background-color: $c-warn-dark;
+    color: $c-warn-soft;
+  }
+
+  &._bad {
+    background-color: $c-bad-dark;
+    color: $c-bad-soft;
+  }
+
+  &._extra {
+    background-color: $c-extra-dark;
+    color: $c-extra-soft;
+  }
+}
