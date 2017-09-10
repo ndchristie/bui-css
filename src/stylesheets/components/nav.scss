@@ -17,10 +17,9 @@
 }
 
 .nav-item {
-  @extend .tile;
-
   flex-shrink: 0;
   min-width: 0;
+  padding: $sp-sm $sp-md;
 }
 
 .nav-fill {
