@@ -1,0 +1,23 @@
+@import '../vars/metrics';
+
+input,
+textarea {
+  @extend .body;
+
+  appearance: none;
+  color: $c-dark;
+  border: none;
+  border-radius: 0;
+  box-shadow: inset 0 -1px $c-bold;
+  box-sizing: border-box;
+  display: block;
+  font-size: $ty-base; // not relative
+  font-weight: 500;
+  height: 2.4em;
+  padding: $sp-xs $sp-sm;
+  max-width: 100%;
+}
+
+textarea {
+  overflow: hidden;
+}
