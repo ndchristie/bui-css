@@ -1,82 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,600,800');
+@import '../functions';
 @import '../vars/color';
-@import '../vars/fonts';
-@import '../mixins/fonts';
+@import '../vars/size';
 
-.bui {
-  color: $theme-darkest;
-
-  &-heading {
-    @include body-font-bold;
-  }
-
-  &-body-text {
-    /*
-    this should already be covered by page rules.
-    it is included as a way to override subelements.
-    */
-    @include body-font;
-
-    font-size: $font-sm;
-  }
-
-  &-fineprint {
-    @include caption-font;
-
-    font-size: $font-xs;
-  }
+body,
+html {
+  color: $c-deep;
+  font-family:
+    'Muli',
+    'Roboto',
+    'Droid Sans',
+    helvetica,
+    arial,
+    sans-serif;
+  font-size: $ty-base;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
 }
 
-/*
-use of h# tags is somewhat discouraged.
-however it remains prevalent, and we require
-a reliable hierarchy.
-*/
-
-h1 {
-  font-size: $font-xxxl;
-}
-
-h2 {
-  font-size: $font-xxl;
-}
-
-h3 {
-  font-size: $font-xl;
-}
-
-h4 {
-  font-size: $font-lg;
-}
-
-h5 {
-  font-size: $font-md;
-}
-
-h6 {
-  font-size: $font-sm;
-}
-
-.bui-heading,
-.bui-body-text,
-.bui-fineprint,
-address,
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-legend,
-p,
 pre {
-  margin-bottom: 0.5em;
-  margin-top: 0;
+  @extend .tile;
+}
+
+pre {
+  @include soft;
+}
+
+h1,
+._xxxl {
+  font-size: #{$ty-xxxl / $ty-base}em;
+}
+
+h2,
+._xxl {
+  font-size: #{$ty-xxl / $ty-base}em;
+}
+
+h3,
+._xl {
+  font-size: #{$ty-xl / $ty-base}em;
+}
+
+h4,
+._lg {
+  font-size: #{$ty-lg / $ty-base}em;
+}
+
+h5,
+._md {
+  font-size: #{$ty-md / $ty-base}em;
+}
+
+p,
+h6 {
+  @extend .body;
+
+  font-size: #{$ty-sm / $ty-base}em;
+}
+
+small {
+  @extend .body;
+
+  font-size: #{$ty-xs / $ty-base}em;
 }
 
 a {
-  color: $theme-primary;
+  @extend .action;
+
+  &:visited {
+    color: $c-extra-deep;
+  }
 }
 
-a:hover {
-  text-decoration: underline;
+.body {
+  color: $c-deep;
+  margin: 0;
+}
+
+.action,
+[onclick],
+[href] {
+  @extend .body;
+
+  color: $c-main-deep;
+  cursor: pointer;
+  font-weight: 600;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &._dark,
+  ._dark &,
+  &._deep,
+  ._deep & {
+    color: $c-white;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  color: $c-dark;
+  font-weight: 800;
+}
+
+._right {
+  text-align: right;
 }
