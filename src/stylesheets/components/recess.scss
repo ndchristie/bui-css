@@ -1,12 +1,16 @@
-@import '../mixins/context';
+.recess {
+  @extend ._deep;
 
-.bui-recess {
-  @include context($map: $context-dark);
+  margin: #{-$sp-md * 2} 0;
+  padding: #{$sp-md} 0;
+  position: relative;
+  z-index: 0;
 
-  margin: -$gutter-width auto;
-  z-index: -1;
+  &:first-child {
+    margin-top: 0;
+  }
 
-  & > .bui-container {
-    padding: #{$gutter-width * 2} 0;
+  &:last-child {
+    margin-bottom: 0;
   }
 }
