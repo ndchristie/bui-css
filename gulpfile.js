@@ -21,7 +21,6 @@ const cssnano = require('cssnano');
 const plugins = [
   cssnext(),
   normalizeCharset(),
-  mergeSelectors(), // unsafe, test assertively
   minifySelectors(),
   minifyFontValues(),
   mergeLonghand(),
@@ -30,21 +29,23 @@ const plugins = [
   discardEmpty(),
   discardDuplicates(),
   discardComments(),
-  convertValues(),
+  convertValues({ length: false, precision: 2 })
 ];
 
-gulp.task('css', () => gulp.src('src/stylesheets/bui.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss(plugins))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('lib/css')),
-  );
+gulp.task('css:watch', ['css:min'], () => gulp.watch('src/**/*.scss', ['css:min']));
 
-gulp.task('css:min', () => gulp.src('lib/**/!(*.min).css')
-    .pipe(sourcemaps.init())
-    .pipe(postcss([cssnano({ autoprefixer: false })]))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('lib')),
-  );
+gulp.task('css', () => gulp.src('src/stylesheets/bui.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass().on('error', sass.logError))
+  .pipe(postcss(plugins))
+  .pipe(sourcemaps.write('.'))
+  .pipe(gulp.dest('lib/css'))
+);
+
+gulp.task('css:min', ['css'], () => gulp.src('lib/**/!(*.min).css')
+  .pipe(sourcemaps.init())
+  .pipe(postcss([cssnano({ autoprefixer: false })]))
+  .pipe(rename({ suffix: '.min' }))
+  .pipe(sourcemaps.write('.'))
+  .pipe(gulp.dest('lib'))
+);

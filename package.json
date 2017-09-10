@@ -4,8 +4,10 @@
   "description": "A contemporary, approachable css library for prototyping and beyond",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev",
     "test": "gulp test",
-    "build": "gulp css && gulp css:min"
+    "dev": "gulp css:watch",
+    "build": "gulp css:min"
   },
   "repository": {
     "type": "git",
