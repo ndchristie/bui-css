@@ -1,60 +1,28 @@
-@import '../vars/color';
-@import '../vars/fonts';
-@import '../vars/metrics';
-@import '../mixins/container';
-@import '../mixins/context';
+.nav {
+  margin-bottom: $sp-md;
+  margin-top: $sp-md;
+  position: relative;
+  z-index: 1;
 
-ul.bui-nav,
-.bui-nav {
-  list-style: none;
-}
-
-.bui-navbar-nav,
-.bui-nav._minor {
-  & > li {
-    display: inline-block;
-    margin: 0 $gutter-width / 2;
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-
-.bui-navbar {
-  @include context;
-
-  box-shadow: 0 4px transparentize($theme-darkest, 0.95);
-  margin: 0 0 $gutter-width;
-
-  ._flat & {
-    box-shadow: none;
-  }
-}
-
-.bui-navbar-inner {
-  @include container;
-  @include flex-row(':first-child');
-
-  flex-wrap: wrap;
-  font-size: $font-lg;
-  padding-top: $gutter-width;
-  padding-bottom: $gutter-width;
-
-  &._minor {
-    font-size: $font-md;
-    padding-top: $gutter-width / 2;
-    padding-bottom: $gutter-width / 2;
-  }
-
-  & * {
-    text-decoration: none;
-    font-size: inherit;
+  &._top {
     margin-top: 0;
-    margin-bottom: 0;
   }
+}
+
+.nav-list {
+  @extend .list;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-item {
+  @extend .tile;
+
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.nav-fill {
+  flex-grow: 1;
 }
