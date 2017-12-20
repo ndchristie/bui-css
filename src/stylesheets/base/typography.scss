@@ -1,17 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:400,600,800');
 @import '../vars/color';
 @import '../vars/metrics';
 
-body,
-html {
-  color: $c-deep;
-  font-family:
+$bui-font-family: false !default;
+
+@if not $bui-font-family {
+  @import url('https://fonts.googleapis.com/css?family=Muli:400,600,800');
+  $bui-font-family:
     'Muli',
     'Roboto',
     'Droid Sans',
     helvetica,
     arial,
     sans-serif;
+}
+
+body,
+html {
+  color: $c-deep;
+  font-family: $bui-font-family;
   font-size: $ty-base;
   font-weight: 400;
   text-rendering: optimizeLegibility;
@@ -114,8 +120,4 @@ h6,
 .title {
   color: $c-dark;
   font-weight: 800;
-}
-
-._right {
-  text-align: right;
 }
