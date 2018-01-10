@@ -1,6 +1,6 @@
-$sp-md: 24px;
-$sp-sm: 12px;
-$sp-xs: 9px;
+$sp-md: 18px;
+$sp-sm: 10px;
+$sp-xs: 8px;
 
 $bp-lg: 1280px;
 $bp-md: 880px;
@@ -8,7 +8,7 @@ $bp-md: 880px;
 $ty-n: 4px;
 
 $ty-base: 15px;
-$ty-xs: $ty-base - $ty-n;
+$ty-xs: $ty-base - $ty-n / 2;
 $ty-sm: $ty-base;
 $ty-md: $ty-base + $ty-n * 1;
 $ty-lg: $ty-base + $ty-n * 2;
