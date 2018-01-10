@@ -4,8 +4,8 @@ $c-dark: #222; /* Shark */
 $c-dark-shadow: rgba(34, 34, 34, 0.87);
 $c-deep: #555; /* Chicago */
 $c-deep-shadow: rgba(34, 34, 34, 0.69);
-$c-bold: #ccc; /* Cloud */
-$c-bold-shadow: rgba(34, 34, 34, 0.25);
+$c-loud: #ccc; /* Cloud */
+$c-loud-shadow: rgba(34, 34, 34, 0.25);
 $c-soft: #eee; /* Gallery */
 $c-soft-shadow: rgba(34, 34, 34, 0.06);
 $c-white: #fff; /* White */
@@ -32,8 +32,8 @@ $c-white: #fff; /* White */
   }
 }
 
-@mixin bold {
-  background-color: $c-bold;
+@mixin loud {
+  background-color: $c-loud;
   color: $c-dark;
 
   a {
@@ -65,32 +65,32 @@ $c-white: #fff; /* White */
   }
 }
 
-/* Error : Red */
-$c-bad-dark: #510; /* Redwood */
-$c-bad-deep: #932; /* Totem Pole */
-$c-bad-bold: #f75; /* Persimmon */
-$c-bad-soft: #fdc; /* Tuft Bush */
+/* Hot : Red */
+$c-hot-dark: #510; /* Redwood */
+$c-hot-deep: #932; /* Totem Pole */
+$c-hot-loud: #f75; /* Persimmon */
+$c-hot-soft: #fdc; /* Tuft Bush */
 
-/* Warning : Yellow */
-$c-warn-dark: #430; /* Madras */
-$c-warn-deep: #864; /* Kumera */
-$c-warn-bold: #fc5; /* Golden Tainoi */
-$c-warn-soft: #fec; /* Oasis */
+/* Loud : Yellow */
+$c-warm-dark: #430; /* Madras */
+$c-warm-deep: #864; /* Kumera */
+$c-warm-loud: #fc5; /* Golden Tainoi */
+$c-warm-soft: #fec; /* Oasis */
 
-/* Success : Green */
-$c-good-dark: #233; /* Outer Space */
-$c-good-deep: #187; /* Pine Green */
-$c-good-bold: #6db; /* Puerto Rico */
-$c-good-soft: #d4f4e4; /* Granny Apple */
+/* Cool : Green */
+$c-cool-dark: #233; /* Outer Space */
+$c-cool-deep: #187; /* Pine Green */
+$c-cool-loud: #6db; /* Puerto Rico */
+$c-cool-soft: #d4f4e4; /* Granny Apple */
 
-/* Primary : Blue */
+/* Main : Blue */
 $c-main-dark: #235; /* Cello */
 $c-main-deep: #26a; /* Matisse */
-$c-main-bold: #9cf; /* Malibu */
+$c-main-loud: #9cf; /* Malibu */
 $c-main-soft: #def; /* Link Water */
 
-/* Extras : Violet */
+/* Extra : Violet */
 $c-extra-dark: #423; /* Livid Brown */
 $c-extra-deep: #746; /* Cosmic */
-$c-extra-bold: #dad; /* Light Wisteria */
+$c-extra-loud: #dad; /* Light Wisteria */
 $c-extra-soft: #edf; /* Moon Raker */

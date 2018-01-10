@@ -1,5 +1,8 @@
+<p align="center"><img width="100" src="http://res.cloudinary.com/ndchristie/image/upload/v1515621001/logos/bui.png" alt="Bui buoy logo graphic"></p>
+
 # Bui CSS
-A contemporary, approachable css library for prototyping and beyond
+
+> A friendly, buoyant css library
 
 ## Quick start
 
@@ -17,6 +20,8 @@ bui-css/
         └── bui.min.css.map
 ```
 
+If you wish to use the source scss files, you can find these in *bui-css/src/stylesheets/*.
+
 ## Features
 
 ### Accessibility First
@@ -25,8 +30,16 @@ All of the pairings found in Bui's classes and mixins meet the requirements for 
 
 Bui also helps users with common types of colorblindness.  By shifting the classic green-red split towards teal and orange, these users are better able to distinguish actions at a glance, improving confidence and reducing mistakes, without sacrificing information or aesthetics for non-colorblind users.
 
-## Frequently Asked Questions
+### Color Modifiers
 
-### How is "bui" pronounced?
+Bui uses 5 value modifiers and 6 hue modifiers to map a wide range of colors.
 
-"Bui" is officially pronounced as "buoy", to relfect it's friendly, buoyant nature.  "Be-you-eye" is also good.
+#### Value Modifiers
+
+The modifier classes ```_dark```, ```_deep```, ```_loud```, ```_soft```, and ```_white``` all affect the relative value of a region, as well as modifying text color to maintain readability.  The first two have bright text on darker backgrounds, while the others have dark text.  These classes can be nested, with the closest ancestor taking precedence.  The ```_white``` class can be used to overrule the hue modifiers below.
+
+#### Hue Modifiers
+
+The modifer classes ```_main```, ```_cool```, ```_warm```, ```_hot```, and  ```_extra``` all affect the relative hue of a region.  Absent a value modifier, they assume the soft value range.  They can also be further modified by the ```_dark```, ```_deep``` and ```_loud``` modifiers, or overridden by the ```_white``` modifier.
+
+In an effort to keep filesize down, hue modifiers cannot be nested, but the order of precedence should afford most common cases.  If you are using the source scss, you can import the mixins from *bui-css/src/stylesheets/vars/color.scss*.

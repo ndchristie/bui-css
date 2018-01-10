@@ -17,7 +17,7 @@
 ._soft { @include soft; }
 
 ._bold {
-  @include bold;
+  @include loud;
 
   ._white { @include white; }
   ._soft { @include soft; }
@@ -37,69 +37,69 @@
   ._soft { @include soft; }
 }
 
-/* good */
+/* cool */
 
 ._good {
-  background-color: $c-good-soft;
-  color: $c-good-deep;
+  background-color: $c-cool-soft;
+  color: $c-cool-deep;
 
   &._bold {
-    background-color: $c-good-bold;
-    color: $c-good-dark;
+    background-color: $c-cool-loud;
+    color: $c-cool-dark;
   }
 
   &._deep {
-    background-color: $c-good-deep;
-    color: $c-good-soft;
+    background-color: $c-cool-deep;
+    color: $c-cool-soft;
   }
 
   &._dark {
-    background-color: $c-good-dark;
-    color: $c-good-soft;
+    background-color: $c-cool-dark;
+    color: $c-cool-soft;
   }
 }
 
-/* warn */
+/* warm */
 
 ._warn {
-  background-color: $c-warn-soft;
-  color: $c-warn-deep;
+  background-color: $c-warm-soft;
+  color: $c-warm-deep;
 
   &._bold {
-    background-color: $c-warn-bold;
-    color: $c-warn-dark;
+    background-color: $c-warm-loud;
+    color: $c-warm-dark;
   }
 
   &._deep {
-    background-color: $c-warn-deep;
-    color: $c-warn-soft;
+    background-color: $c-warm-deep;
+    color: $c-warm-soft;
   }
 
   &._dark {
-    background-color: $c-warn-dark;
-    color: $c-warn-soft;
+    background-color: $c-warm-dark;
+    color: $c-warm-soft;
   }
 }
 
-/* bad */
+/* hot */
 
 ._bad {
-  background-color: $c-bad-soft;
-  color: $c-bad-deep;
+  background-color: $c-hot-soft;
+  color: $c-hot-deep;
 
   &._bold {
-    background-color: $c-bad-bold;
-    color: $c-bad-dark;
+    background-color: $c-hot-loud;
+    color: $c-hot-dark;
   }
 
   &._deep {
-    background-color: $c-bad-deep;
-    color: $c-bad-soft;
+    background-color: $c-hot-deep;
+    color: $c-hot-soft;
   }
 
   &._dark {
-    background-color: $c-bad-dark;
-    color: $c-bad-soft;
+    background-color: $c-hot-dark;
+    color: $c-hot-soft;
   }
 }
 
@@ -110,7 +110,7 @@
   color: $c-main-deep;
 
   &._bold {
-    background-color: $c-main-bold;
+    background-color: $c-main-loud;
     color: $c-main-dark;
   }
 
@@ -132,7 +132,7 @@
   color: $c-extra-deep;
 
   &._bold {
-    background-color: $c-extra-bold;
+    background-color: $c-extra-loud;
     color: $c-extra-dark;
   }
 
