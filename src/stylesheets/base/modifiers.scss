@@ -1,7 +1,11 @@
+@import '../vars/color';
+@import '../vars/metrics';
+
 /* Margins & Spacing */
 
-._top {
-  margin-top: 0;
+._tight {
+  margin: 0 auto;
+  padding: 0;
   overflow: auto;
 }
 

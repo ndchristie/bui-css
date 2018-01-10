@@ -1,7 +1,8 @@
 @import '../vars/metrics';
 
 .container {
-  margin: $sp-sm auto;
+  margin: auto;
+  padding: $sp-md 0;
   max-width: $bp-md;
   overflow: auto;
   position: relative;
