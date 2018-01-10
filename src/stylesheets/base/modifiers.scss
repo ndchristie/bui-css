@@ -7,7 +7,6 @@
 
 /* Color Regions */
 
-._default,
 ._white {
   @include white;
 }
@@ -34,7 +33,7 @@
   }
 }
 
-.warn {
+._warn {
   background-color: $c-warn-soft;
   color: $c-warn-deep;
 
