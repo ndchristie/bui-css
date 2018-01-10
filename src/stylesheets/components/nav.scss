@@ -1,6 +1,4 @@
 .nav {
-  margin-bottom: $sp-md;
-  margin-top: $sp-md;
   position: relative;
   z-index: 1;
 }
@@ -9,10 +7,14 @@
   @extend .list;
 
   display: flex;
+  align-content: flex-end;
   flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
 }
 
 .nav-item {
+  cursor: pointer;
   flex-shrink: 0;
   min-width: 0;
   padding: $sp-sm $sp-md;
