@@ -14,8 +14,10 @@ $c-white: #fff; /* White */
   background-color: $c-white;
   color: $c-deep;
 
-  & .title {
-    color: $c-dark;
+  a {
+    color: $c-main-deep;
+
+    &:visited { color: $c-extra-deep; }
   }
 }
 
@@ -23,22 +25,32 @@ $c-white: #fff; /* White */
   background-color: $c-soft;
   color: $c-deep;
 
-  & .title {
-    color: $c-dark;
+  a {
+    color: $c-main-deep;
+
+    &:visited { color: $c-extra-deep; }
   }
 }
 
 @mixin bold {
   background-color: $c-bold;
   color: $c-dark;
+
+  a {
+    color: $c-main-deep;
+
+    &:visited { color: $c-extra-deep; }
+  }
 }
 
 @mixin deep {
   background-color: $c-deep;
   color: $c-soft;
 
-  & .title {
+  a {
     color: $c-white;
+
+    &:visited { color: $c-white; }
   }
 }
 
@@ -46,8 +58,10 @@ $c-white: #fff; /* White */
   background-color: $c-dark;
   color: $c-soft;
 
-  & .title {
-    color: $c-white;
+  a {
+    color: $c-main-soft;
+
+    &:visited { color: $c-extra-soft; }
   }
 }
 
