@@ -23,6 +23,19 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+.title {
+  font-weight: 800;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+strong {
+  @extend .title;
+}
+
 p,
 h1,
 h2,
@@ -109,15 +122,4 @@ a {
   ._deep & {
     color: $c-white;
   }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.title {
-  color: $c-dark;
-  font-weight: 800;
 }
