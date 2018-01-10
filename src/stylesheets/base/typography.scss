@@ -76,50 +76,27 @@ h5,
   font-size: #{$ty-md / $ty-base}em;
 }
 
-p,
-h6 {
-  @extend .body;
-
+._sm {
   font-size: #{$ty-sm / $ty-base}em;
 }
 
-small {
-  @extend .body;
-
+._xs {
   font-size: #{$ty-xs / $ty-base}em;
 }
 
-a {
-  @extend .action;
-
-  &:visited {
-    color: $c-extra-deep;
-  }
+p,
+h6 {
+  @extend ._sm;
 }
 
-.body {
-  color: $c-deep;
-  margin: 0;
+small {
+  @extend ._xs;
 }
 
+a,
 .action,
 [onclick],
 [href] {
-  @extend .body;
-
-  color: $c-main-deep;
   cursor: pointer;
   font-weight: 600;
-  opacity: 0.9;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &._dark,
-  ._dark &,
-  &._deep,
-  ._deep & {
-    color: $c-white;
-  }
 }
