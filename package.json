@@ -8,7 +8,7 @@
     "test": "gulp test",
     "dev": "gulp css:watch",
     "build": "gulp css:min",
-    "release": "standard-version"
+    "release": "npm run build && standard-version"
   },
   "repository": {
     "type": "git",
