@@ -19,22 +19,22 @@
 ._bold {
   @include loud;
 
-  ._white { @include white; }
   ._soft { @include soft; }
+  ._white { @include white; }
 }
 
 ._deep {
   @include deep;
 
-  ._white { @include white; }
   ._soft { @include soft; }
+  ._white { @include white; }
 }
 
 ._dark {
   @include dark;
 
-  ._white { @include white; }
   ._soft { @include soft; }
+  ._white { @include white; }
 }
 
 /* cool */
