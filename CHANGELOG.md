@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/ndchristie/bui/compare/v1.1.0...v2.0.0) (2018-01-16)
+
+
+### Features
+
+* Adjust color names to reflect relationships over previous roles ([53dc10a](https://github.com/ndchristie/bui/commit/53dc10a))
+* **Color:** Apply color relationship mixin nomenclature to modifier classes ([a82d823](https://github.com/ndchristie/bui/commit/a82d823))
+* **Color:** Apply dark colors to link text on loud backgrounds by default to maintain WCAG2.0 AAA r ([0bcaf48](https://github.com/ndchristie/bui/commit/0bcaf48))
+* **Color:** Improve leapfrogging for value modifiers ([2e94a69](https://github.com/ndchristie/bui/commit/2e94a69))
+
+
+### BREAKING CHANGES
+
+* **Color:** Previous hue modifier classes (_bad, _good, etc) will have no effect, falling back
+to the neutral swatches.
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/ndchristie/bui/compare/v1.0.2...v1.1.0) (2018-01-10)
 
