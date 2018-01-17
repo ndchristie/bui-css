@@ -14,6 +14,22 @@ $bui-font-family: false !default;
     sans-serif;
 }
 
+$bui-script-family: false !default;
+
+@if not $bui-script-family {
+  @import url('https://fonts.googleapis.com/css?family=Merriweather:400i,700i');
+  $bui-script-family:
+    'Merriweather',
+    'Garamond',
+    georgia,
+    serif;
+}
+
+.script {
+  font-family: $bui-script-family;
+  font-style: italic;
+}
+
 body,
 html {
   color: $c-deep;

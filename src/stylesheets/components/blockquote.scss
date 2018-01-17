@@ -1,0 +1,36 @@
+@import '../vars/color';
+@import '../vars/metrics';
+
+blockquote,
+.blockquote {
+  @extend .tile;
+  @extend .script;
+  @extend ._md;
+
+  $tab-size: $sp-sm;
+  $sqrt2: 1.4142135623730951;
+
+  margin: 0 $sp-md;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: 0;
+    right: 0;
+    height: $tab-size * $sqrt2;
+    width: $tab-size * $sqrt2;
+  }
+
+  &,
+  &::before {
+    background: linear-gradient(-45deg, transparent $tab-size, $c-soft-shadow $tab-size);
+
+    ._loud &,
+    ._deep &,
+    ._dark & {
+      background: linear-gradient(-45deg, transparent $tab-size, transparentize($c-white, 0.69) $tab-size);
+    }
+  }
+}
