@@ -1,0 +1,14 @@
+a,
+.action,
+.anchor,
+[onclick],
+[href] {
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

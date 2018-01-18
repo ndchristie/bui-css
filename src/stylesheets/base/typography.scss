@@ -108,11 +108,3 @@ h6 {
 small {
   @extend ._xs;
 }
-
-a,
-.action,
-[onclick],
-[href] {
-  cursor: pointer;
-  font-weight: 600;
-}
