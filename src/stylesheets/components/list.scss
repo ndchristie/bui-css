@@ -1,0 +1,11 @@
+.list {
+  @extend .tile;
+
+  list-style: none;
+}
+
+.bullet-point-list {
+  @extend .list;
+
+  list-style: bullet;
+}

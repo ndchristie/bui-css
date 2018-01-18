@@ -4,13 +4,13 @@
 }
 
 .nav-list {
-  @extend .list;
-
   display: flex;
   align-content: flex-end;
   flex-direction: row;
   flex-wrap: wrap;
+  list-style: none;
   width: auto;
+  padding: 0;
 }
 
 .nav-item {
