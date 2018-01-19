@@ -7,5 +7,6 @@
 .bullet-point-list {
   @extend .list;
 
-  list-style: bullet;
+  list-style: unset;
+  list-style-position: inside;
 }
