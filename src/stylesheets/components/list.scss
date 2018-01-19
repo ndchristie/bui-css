@@ -4,8 +4,9 @@
   list-style: none;
 }
 
-.bullet-point-list {
-  @extend .list;
+.bullet-point-list,
+.list.bullet-point-list {
+  @extend .tile;
 
   list-style: unset;
   list-style-position: inside;
