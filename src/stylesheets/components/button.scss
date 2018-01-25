@@ -1,12 +1,13 @@
 @import '../vars/color';
 @import '../vars/metrics';
 
+button,
 .btn {
   @extend .action;
   @extend ._loud;
 
-  background-color: transparent;
-  border-width: 0;
+  appearance: none;
+  border-width: none;
   font-size: #{$ty-sm / $ty-base}em;
   padding: $sp-xs $sp-md;
   text-align: center;
