@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.3.0"></a>
+# [2.3.0](https://github.com/ndchristie/bui/compare/v2.2.1...v2.3.0) (2018-01-25)
+
+
+### Bug Fixes
+
+* Fix broken [@extend](https://github.com/extend) in list styles ([ba86434](https://github.com/ndchristie/bui/commit/ba86434))
+* Include additional cases for leapfrogging, including explicit soft-ness of color modifiers ([df7bc74](https://github.com/ndchristie/bui/commit/df7bc74))
+
+
+### Features
+
+* Improve button, checkbox and radio styling ([0603243](https://github.com/ndchristie/bui/commit/0603243))
+
+
+
 <a name="2.2.1"></a>
 ## [2.2.1](https://github.com/ndchristie/bui/compare/v2.2.0...v2.2.1) (2018-01-19)
 
