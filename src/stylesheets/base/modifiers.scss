@@ -19,7 +19,6 @@
 ._loud {
   @include loud;
 
-  ._loud { @include loud; }
   ._soft { @include soft; }
   ._white { @include white; }
 }
@@ -35,6 +34,7 @@
 ._dark {
   @include dark;
 
+  ._deep { @include loud; }
   ._loud { @include loud; }
   ._soft { @include soft; }
   ._white { @include white; }
@@ -42,7 +42,10 @@
 
 /* cool */
 
-._cool {
+._cool,
+._cool._soft {
+  @include soft;
+
   background-color: $c-cool-soft;
   color: $c-cool-deep;
 
@@ -64,7 +67,10 @@
 
 /* warm */
 
-._warm {
+._warm,
+._warm._soft {
+  @include soft;
+
   background-color: $c-warm-soft;
   color: $c-warm-deep;
 
@@ -86,7 +92,10 @@
 
 /* hot */
 
-._hot {
+._hot,
+._hot._soft {
+  @include soft;
+
   background-color: $c-hot-soft;
   color: $c-hot-deep;
 
@@ -108,7 +117,10 @@
 
 /* main */
 
-._main {
+._main,
+._main._soft {
+  @include soft;
+
   background-color: $c-main-soft;
   color: $c-main-deep;
 
@@ -130,7 +142,10 @@
 
 /* extra */
 
-._extra {
+._extra,
+._extra._soft {
+  @include soft;
+
   background-color: $c-extra-soft;
   color: $c-extra-deep;
 
