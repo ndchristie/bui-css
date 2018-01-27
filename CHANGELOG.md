@@ -2,13 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.3.1"></a>
+## [2.3.1](https://github.com/ndchristie/bui/compare/v2.3.0...v2.3.1) (2018-01-27)
+
+
+
 <a name="2.3.0"></a>
 # [2.3.0](https://github.com/ndchristie/bui/compare/v2.2.1...v2.3.0) (2018-01-25)
 
 
 ### Bug Fixes
 
-* Fix broken [@extend](https://github.com/extend) in list styles ([ba86434](https://github.com/ndchristie/bui/commit/ba86434))
+* Fix broken extension in list styles ([ba86434](https://github.com/ndchristie/bui/commit/ba86434))
 * Include additional cases for leapfrogging, including explicit soft-ness of color modifiers ([df7bc74](https://github.com/ndchristie/bui/commit/df7bc74))
 
 
@@ -75,11 +80,11 @@ to the neutral swatches.
 ### Features
 
 * Add ._tight modifier to eliminate .container spacing for more adaptable layouts ([7077206](https://github.com/ndchristie/bui/commit/7077206))
-* **color.scss:** Consolidate color information in mixins ([77109d7](https://github.com/ndchristie/bui/commit/77109d7))
-* **modifiers.scss:** Add hopscotching for light modifiers nested inside of darker ones ([c8ff06f](https://github.com/ndchristie/bui/commit/c8ff06f))
-* **nav.scss:** Tidy up nav for more fluid use ([ef12f38](https://github.com/ndchristie/bui/commit/ef12f38))
-* **typography:** Consolidate typography classes to reflect streamlined spacing and color features ([bbe06d4](https://github.com/ndchristie/bui/commit/bbe06d4))
-* **typography.scss:** Consolidate title styles and selectors ([89a400f](https://github.com/ndchristie/bui/commit/89a400f))
+* **Color:** Consolidate color information in mixins ([77109d7](https://github.com/ndchristie/bui/commit/77109d7))
+* **Modifiers:** Add hopscotching for light modifiers nested inside of darker ones ([c8ff06f](https://github.com/ndchristie/bui/commit/c8ff06f))
+* **Nav:** Tidy up nav for more fluid use ([ef12f38](https://github.com/ndchristie/bui/commit/ef12f38))
+* **Typography:** Consolidate Typography classes to reflect streamlined spacing and color features ([bbe06d4](https://github.com/ndchristie/bui/commit/bbe06d4))
+* **Typography:** Consolidate title styles and selectors ([89a400f](https://github.com/ndchristie/bui/commit/89a400f))
 * Apply white styling to body by default to avoid imposing modifier on body ([691a208](https://github.com/ndchristie/bui/commit/691a208))
 * Tidy up spacing and sizing ([74d5469](https://github.com/ndchristie/bui/commit/74d5469))
 
@@ -91,11 +96,11 @@ to the neutral swatches.
 
 ### Features
 
-** moved ._good, ._bad etc. from container.scss to new modifiers.scss
+** moved ._good, ._bad etc. from container.scss to new Modifiers
 
 ### Bug Fixes
 
-* **modifiers.scss:** Fix erroneous modifier .warn => ._warn ([7c5d3a3](https://github.com/ndchristie/bui/commit/7c5d3a3))
+* **Modifiers:** Fix erroneous modifier .warn => ._warn ([7c5d3a3](https://github.com/ndchristie/bui/commit/7c5d3a3))
 
 
 ## 1.0.1 - 2017-09-10
@@ -110,5 +115,5 @@ to the neutral swatches.
 ### Features
 
 * Gulp tasks for building minified CSS from SCSS source files
-* Base styling for colors, box measurements, and typography
+* Base styling for colors, box measurements, and Typography
 * Essential styling for navigation, buttons, inputs, tables, and logical container groups

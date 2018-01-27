@@ -40,6 +40,6 @@ The modifier classes ```_dark```, ```_deep```, ```_loud```, ```_soft```, and ```
 
 #### Hue Modifiers
 
-The modifer classes ```_main```, ```_cool```, ```_warm```, ```_hot```, and  ```_extra``` all affect the relative hue of a region.  Absent a value modifier, they assume the soft value range.  They can also be further modified by the ```_dark```, ```_deep``` and ```_loud``` modifiers, or overridden by the ```_white``` modifier.
+The modifer classes ```_main```, ```_cool```, ```_warm```, ```_hot```, and  ```_extra``` all affect the relative hue of a region.  These further modify the the ```_dark```, ```_deep``` and ```_loud``` modifiers; As such they have no effect when alone or with the ```_white``` modifier.
 
 In an effort to keep filesize down, hue modifiers cannot be nested, but the order of precedence should afford most common cases.  If you are using the source scss, you can import the mixins from *bui-css/src/stylesheets/vars/color.scss*.
