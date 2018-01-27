@@ -9,124 +9,76 @@
   overflow: auto;
 }
 
-/* Color Regions */
+body,
+._white {
+  background-color: $c-white;
+  color: $c-deep;
 
-/* regular */
+  & [href] {
+    color: $c-main-deep;
 
-._white { @include white; }
-._soft { @include soft; }
-
-._loud {
-  @include loud;
-
-  ._soft { @include soft; }
-  ._white { @include white; }
-}
-
-._deep {
-  @include deep;
-
-  ._loud { @include loud; }
-  ._soft { @include soft; }
-  ._white { @include white; }
+    &:visited {
+      color: $c-extra-deep;
+    }
+  }
 }
 
 ._dark {
-  @include dark;
+  background-color: $c-dark;
+  color: $c-white;
 
-  ._deep { @include loud; }
-  ._loud { @include loud; }
-  ._soft { @include soft; }
-  ._white { @include white; }
-}
+  & [href] {
+    color: $c-white;
 
-/* cool */
-
-._cool,
-._cool._soft {
-  @include soft;
-
-  background-color: $c-cool-soft;
-  color: $c-cool-deep;
-
-  &._loud {
-    background-color: $c-cool-loud;
-    color: $c-cool-dark;
-  }
-
-  &._deep {
-    background-color: $c-cool-deep;
-    color: $c-cool-soft;
-  }
-
-  &._dark {
-    background-color: $c-cool-dark;
-    color: $c-cool-soft;
+    &:visited {
+      color: $c-white;
+    }
   }
 }
 
-/* warm */
+._deep {
+  background-color: $c-deep;
+  color: $c-soft;
 
-._warm,
-._warm._soft {
-  @include soft;
+  & [href] {
+    color: $c-main-soft;
 
-  background-color: $c-warm-soft;
-  color: $c-warm-deep;
-
-  &._loud {
-    background-color: $c-warm-loud;
-    color: $c-warm-dark;
-  }
-
-  &._deep {
-    background-color: $c-warm-deep;
-    color: $c-warm-soft;
-  }
-
-  &._dark {
-    background-color: $c-warm-dark;
-    color: $c-warm-soft;
+    &:visited {
+      color: $c-extra-soft;
+    }
   }
 }
 
-/* hot */
+._loud {
+  background-color: $c-loud;
+  color: $c-dark;
 
-._hot,
-._hot._soft {
-  @include soft;
-
-  background-color: $c-hot-soft;
-  color: $c-hot-deep;
-
-  &._loud {
-    background-color: $c-hot-loud;
-    color: $c-hot-dark;
-  }
-
-  &._deep {
-    background-color: $c-hot-deep;
-    color: $c-hot-soft;
-  }
-
-  &._dark {
-    background-color: $c-hot-dark;
-    color: $c-hot-soft;
-  }
-}
-
-/* main */
-
-._main,
-._main._soft {
-  @include soft;
-
-  background-color: $c-main-soft;
-  color: $c-main-deep;
-
-  &._loud {
-    background-color: $c-main-loud;
+  & [href] {
     color: $c-main-dark;
+
+    &:visited {
+      color: $c-extra-dark;
+    }
+  }
+}
+
+._soft {
+  background-color: $c-soft;
+  color: $c-dark;
+
+  & [href] {
+    color: $c-main-deep;
+
+    &:visited {
+      color: $c-extra-deep;
+    }
+  }
+}
+
+._main {
+  &._dark {
+    background-color: $c-main-dark;
+    color: $c-white;
   }
 
   &._deep {
@@ -134,24 +86,107 @@
     color: $c-main-soft;
   }
 
-  &._dark {
-    background-color: $c-main-dark;
-    color: $c-main-soft;
+  &._loud {
+    background-color: $c-main-loud;
+    color: $c-main-dark;
+  }
+
+  &._soft {
+    background-color: $c-main-soft;
+    color: $c-main-dark;
+  }
+
+  &._white {
+    background-color: $c-white;
+    color: $c-main-dark;
   }
 }
 
-/* extra */
+._cool {
+  &._dark {
+    background-color: $c-cool-dark;
+    color: $c-white;
+  }
 
-._extra,
-._extra._soft {
-  @include soft;
-
-  background-color: $c-extra-soft;
-  color: $c-extra-deep;
+  &._deep {
+    background-color: $c-cool-deep;
+    color: $c-cool-soft;
+  }
 
   &._loud {
-    background-color: $c-extra-loud;
-    color: $c-extra-dark;
+    background-color: $c-cool-loud;
+    color: $c-cool-dark;
+  }
+
+  &._soft {
+    background-color: $c-cool-soft;
+    color: $c-cool-dark;
+  }
+
+  &._white {
+    background-color: $c-white;
+    color: $c-cool-dark;
+  }
+}
+
+._warm {
+  &._dark {
+    background-color: $c-warm-dark;
+    color: $c-white;
+  }
+
+  &._deep {
+    background-color: $c-warm-deep;
+    color: $c-warm-soft;
+  }
+
+  &._loud {
+    background-color: $c-warm-loud;
+    color: $c-warm-dark;
+  }
+
+  &._soft {
+    background-color: $c-warm-soft;
+    color: $c-warm-dark;
+  }
+
+  &._white {
+    background-color: $c-white;
+    color: $c-warm-dark;
+  }
+}
+
+._hot {
+  &._dark {
+    background-color: $c-hot-dark;
+    color: $c-white;
+  }
+
+  &._deep {
+    background-color: $c-hot-deep;
+    color: $c-hot-soft;
+  }
+
+  &._loud {
+    background-color: $c-hot-loud;
+    color: $c-hot-dark;
+  }
+
+  &._soft {
+    background-color: $c-hot-soft;
+    color: $c-hot-dark;
+  }
+
+  &._white {
+    background-color: $c-white;
+    color: $c-hot-dark;
+  }
+}
+
+._extra {
+  &._dark {
+    background-color: $c-extra-dark;
+    color: $c-white;
   }
 
   &._deep {
@@ -159,9 +194,19 @@
     color: $c-extra-soft;
   }
 
-  &._dark {
-    background-color: $c-extra-dark;
-    color: $c-extra-soft;
+  &._loud {
+    background-color: $c-extra-loud;
+    color: $c-extra-dark;
+  }
+
+  &._soft {
+    background-color: $c-extra-soft;
+    color: $c-extra-dark;
+  }
+
+  &._white {
+    background-color: $c-white;
+    color: $c-extra-dark;
   }
 }
 

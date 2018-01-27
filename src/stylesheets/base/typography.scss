@@ -63,10 +63,6 @@ pre {
   @extend .tile;
 }
 
-pre {
-  @include soft;
-}
-
 h1,
 ._xxxl {
   font-size: #{$ty-xxxl / $ty-base}em;

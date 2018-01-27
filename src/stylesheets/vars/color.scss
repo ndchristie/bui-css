@@ -10,61 +10,6 @@ $c-soft: #eee; /* Gallery */
 $c-soft-shadow: rgba(34, 34, 34, 0.06);
 $c-white: #fff; /* White */
 
-@mixin white {
-  background-color: $c-white;
-  color: $c-deep;
-
-  a {
-    color: $c-main-deep;
-
-    &:visited { color: $c-extra-deep; }
-  }
-}
-
-@mixin soft {
-  background-color: $c-soft;
-  color: $c-deep;
-
-  a {
-    color: $c-main-deep;
-
-    &:visited { color: $c-extra-deep; }
-  }
-}
-
-@mixin loud {
-  background-color: $c-loud;
-  color: $c-dark;
-
-  a {
-    color: $c-main-dark;
-
-    &:visited { color: $c-extra-dark; }
-  }
-}
-
-@mixin deep {
-  background-color: $c-deep;
-  color: $c-soft;
-
-  a {
-    color: $c-white;
-
-    &:visited { color: $c-white; }
-  }
-}
-
-@mixin dark {
-  background-color: $c-dark;
-  color: $c-soft;
-
-  a {
-    color: $c-main-soft;
-
-    &:visited { color: $c-extra-soft; }
-  }
-}
-
 /* Hot : Red */
 $c-hot-dark: #510; /* Redwood */
 $c-hot-deep: #932; /* Totem Pole */

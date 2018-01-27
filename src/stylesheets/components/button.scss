@@ -4,12 +4,12 @@
 button,
 .btn {
   @extend .action;
-  @extend ._loud;
 
   appearance: none;
-  border-width: none;
+  border: none;
   font-size: #{$ty-sm / $ty-base}em;
   padding: $sp-xs $sp-md;
+  margin: 1px;
   text-align: center;
 
   &:hover {
